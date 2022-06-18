@@ -1,15 +1,17 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route }  from "react-router-dom";
 import './App.css';
 import HomePage from "./components/HomePage";
-import { Route, Routes } from 'react-router-dom';
-import RecordList from './components/recordList';
+import CompsRecords from "./components/Comps/CompsRecords";
 
 function App() {
 return (
     <div>
-      <HomePage />
-      <Routes>
-        <Route exact path="/test" element={<RecordList />} />
-      </Routes>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<CompsRecords/>} />
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }
